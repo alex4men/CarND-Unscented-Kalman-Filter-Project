@@ -56,6 +56,9 @@ class UKF {
 
   // state covariance matrix
   Eigen::MatrixXd P_;
+  
+  // process covariance matrix
+  Eigen::MatrixXd Q_;
 
   // predicted sigma points matrix
   Eigen::MatrixXd Xsig_pred_;
@@ -92,6 +95,9 @@ class UKF {
 
   // Augmented state dimension
   int n_aug_;
+  
+  // Number of sigma points
+  int n_sig_;
 
   // Sigma point spreading parameter
   double lambda_;
